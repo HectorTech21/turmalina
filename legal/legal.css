@@ -1,0 +1,13 @@
+/* Estilos de las páginas legales (colores tomados de content.js por legal.js) */
+:root { --rubellite:#7E2643; --indigo:#2F5D6B; --amber:#C7883C; --stone:#ECE8E4; --ink:#1F1B1E; }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--stone); color:var(--ink); font:1.125rem/1.65 'Hanken Grotesk', system-ui, sans-serif; }
+a { color:inherit; }
+:focus-visible { outline:3px solid var(--indigo); outline-offset:3px; }
+.lg-header { background:var(--stone); border-bottom:3px solid var(--rubellite); padding:16px 20px; display:flex; justify-content:space-between; align-items:center; gap:16px; font-size:1rem; }
+.lg-header span { font-family:'Marcellus', serif; font-size:1.25rem; color:var(--rubellite); }
+.lg { max-width:68ch; margin:0 auto; padding:40px 20px 72px; }
+.lg h1 { font-family:'Marcellus', serif; font-weight:400; font-size:clamp(2rem,7vw,2.75rem); line-height:1.1; margin:12px 0 24px; }
+.lg h2 { font-family:'Marcellus', serif; font-weight:400; font-size:1.4rem; margin:32px 0 8px; }
+.lg-note { display:inline-block; font-size:.875rem; color:#8A5A1F; border:1px dashed var(--amber); padding:3px 12px; }
+.lg-updated { margin-top:40px; font-size:.9375rem; color:#4f4a4d; }

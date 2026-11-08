@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- SEO. Estas etiquetas se actualizan solas desde content.js al cargar la página,
+       pero WhatsApp, Facebook y algunos buscadores leen el HTML sin ejecutar JavaScript:
+       si reutilizas la plantilla para otro salón, cambia también este bloque. -->
+  <title>Turmalina Salón de Belleza | Peluquería y estética en Ciudad Lineal</title>
+  <meta name="description" content="Peluquería unisex, manicura, depilación, faciales y tratamientos corporales en el C.C. Alcalá Norte (C/ Alcalá 414, Madrid), junto al metro Ciudad Lineal. Llama al 663 64 17 38.">
+  <link rel="canonical" href="https://turmalina-salon.example.com/">
+  <meta name="theme-color" content="#ECE8E4">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:locale:alternate" content="en_GB">
+  <meta property="og:site_name" content="Turmalina Salón de Belleza">
+  <meta property="og:title" content="Turmalina Salón de Belleza | Peluquería y estética en Ciudad Lineal">
+  <meta property="og:description" content="Peluquería unisex, manicura, depilación y tratamientos faciales y corporales en el C.C. Alcalá Norte, Madrid. Lunes a viernes de 10:00 a 20:00, sábados de 10:00 a 19:00.">
+  <meta property="og:url" content="https://turmalina-salon.example.com/">
+  <!-- Imagen para compartir: 1200 × 630 px -->
+  <meta property="og:image" content="https://turmalina-salon.example.com/img/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Marcellus&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+
+  <!-- Datos estructurados (BeautySalon). Se regeneran desde content.js al cargar. -->
+  <script type="application/ld+json" id="ld-json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BeautySalon",
+    "name": "Turmalina Salón de Belleza",
+    "telephone": "+34663641738",
+    "url": "https://turmalina-salon.example.com/",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "C/ Alcalá 414, Centro Comercial Alcalá Norte, Planta 1, Local 13",
+      "postalCode": "28027",
+      "addressLocality": "Madrid",
+      "addressRegion": "Comunidad de Madrid",
+      "addressCountry": "ES"
+    },
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "10:00",
+      "closes": "20:00"
+    }, {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Saturday"],
+      "opens": "10:00",
+      "closes": "19:00"
+    }]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="ui.skip">Saltar al contenido</a>
+
+  <!-- Franja de propuesta: se quita en content.js (proposalBanner.show = false) o borrando este div -->
+  <div class="proposal" id="proposal" hidden></div>
+
+  <header class="header" id="top">
+    <div class="header__inner">
+      <a class="brand" href="#top" aria-label="Turmalina Salón de Belleza, inicio">
+        <span class="brand__name" data-bind="business.shortName">Turmalina</span>
+        <span class="brand__tag" data-i18n="business.tagline">Salón de Belleza</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Principal">
+        <ul class="nav__list" id="nav-list"></ul>
+      </nav>
+
+      <div class="header__tools">
+        <div class="lang" role="group" id="lang-switch"></div>
+        <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="nav">
+          <span class="menu-btn__bars" aria-hidden="true"></span>
+          <span class="visually-hidden" data-i18n="ui.menu">Menú</span>
+        </button>
+      </div>
+    </div>
+    <div class="veins" aria-hidden="true"><span></span><span></span><span></span></div>
+  </header>
+
+  <main id="main">
+    <!-- 1. Inicio -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__inner">
+        <div class="hero__copy">
+          <h1 class="hero__title" id="hero-title" data-i18n="hero.title"></h1>
+          <p class="hero__text" data-i18n="hero.text"></p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" data-link="tel">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
+              <span data-i18n="ui.call">Llamar</span>
+            </a>
+            <a class="btn btn--outline" data-link="directions" target="_blank" rel="noopener">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+              <span data-i18n="ui.directions">Cómo llegar</span>
+            </a>
+          </div>
+          <p class="hero__where" data-i18n="hero.where"></p>
+          <p class="hero__meta">
+            <span class="rating" id="hero-rating"></span>
+            <span class="status" id="hero-status"></span>
+          </p>
+        </div>
+        <div class="hero__media">
+          <!-- "Lámina" de turmalina: bandas de color como las vetas de la piedra -->
+          <div class="slab" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          <div class="gem gem--hero" id="hero-image"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Servicios -->
+    <section class="section services" id="servicios" aria-labelledby="services-title">
+      <div class="wrap">
+        <header class="section__head">
+          <h2 class="section__title" id="services-title" data-i18n="services.title"></h2>
+          <p class="section__intro" data-i18n="services.intro"></p>
+          <p class="editable-note" data-i18n="ui.samplePrice"></p>
+        </header>
+        <nav class="cat-jump" id="cat-jump" aria-label="Categorías de servicios"></nav>
+        <div class="services__grid" id="services-list"></div>
+      </div>
+    </section>
+
+    <!-- 3. Antes / Después -->
+    <section class="section gallery" id="galeria" aria-labelledby="gallery-title">
+      <div class="wrap gallery__inner">
+        <header class="section__head">
+          <h2 class="section__title" id="gallery-title" data-i18n="gallery.title"></h2>
+          <p class="section__intro" data-i18n="gallery.intro"></p>
+          <div class="pair-tabs" role="tablist" id="pair-tabs" aria-labelledby="gallery-title"></div>
+        </header>
+        <div class="compare-frame">
+          <div class="compare" id="compare">
+            <div class="compare__img compare__img--after" id="compare-after"></div>
+            <div class="compare__img compare__img--before" id="compare-before"></div>
+            <span class="compare__tag compare__tag--before" data-i18n="ui.before" aria-hidden="true"></span>
+            <span class="compare__tag compare__tag--after" data-i18n="ui.after" aria-hidden="true"></span>
+            <div class="compare__handle" aria-hidden="true"><span></span></div>
+            <input class="compare__range" id="compare-range" type="range" min="0" max="100" value="50" step="1">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Por qué elegirnos / opiniones -->
+    <section class="section why" id="opiniones" aria-labelledby="why-title">
+      <div class="wrap">
+        <div class="why__top">
+          <h2 class="section__title" id="why-title" data-i18n="why.title"></h2>
+          <div class="score" id="score"></div>
+        </div>
+        <ul class="points" id="points"></ul>
+        <h3 class="reviews__title" data-i18n="why.reviews.title"></h3>
+        <ul class="reviews" id="reviews"></ul>
+      </div>
+    </section>
+
+    <!-- 5. Horario y ubicación -->
+    <section class="section visit" id="visitanos" aria-labelledby="visit-title">
+      <div class="wrap visit__inner">
+        <div class="visit__info">
+          <h2 class="section__title" id="visit-title" data-i18n="visit.title"></h2>
+          <address class="address" id="address"></address>
+          <p class="visit__find" data-i18n="visit.findUs"></p>
+          <p class="visit__transport" data-i18n="visit.transport"></p>
+          <h3 class="visit__subtitle" data-i18n="visit.hoursTitle"></h3>
+          <table class="hours" id="hours"></table>
+        </div>
+        <div class="map">
+          <iframe id="map" title="Mapa" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Contacto -->
+    <section class="section contact" id="contacto" aria-labelledby="contact-title">
+      <div class="wrap contact__inner">
+        <h2 class="section__title" id="contact-title" data-i18n="contact.title"></h2>
+        <p class="contact__text" data-i18n="contact.text"></p>
+        <div class="contact__actions">
+          <a class="btn btn--light btn--lg" data-link="tel">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
+            <span><span data-i18n="ui.call">Llamar</span> <span class="btn__sub" data-bind="business.phoneDisplay"></span></span>
+          </a>
+          <!-- Se oculta solo mientras business.whatsapp esté vacío en content.js -->
+          <a class="btn btn--ghost-light btn--lg" data-link="whatsapp" target="_blank" rel="noopener" hidden>
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>
+            <span data-i18n="ui.whatsapp">WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 7. Pie -->
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <div>
+        <p class="footer__brand" data-bind="business.name"></p>
+        <p class="footer__addr" id="footer-addr"></p>
+      </div>
+      <ul class="footer__legal" id="footer-legal"></ul>
+      <p class="footer__copy" id="footer-copy"></p>
+    </div>
+  </footer>
+
+  <!-- Barra fija de acciones en el móvil -->
+  <div class="dock" aria-label="Acciones rápidas">
+    <a class="dock__btn" data-link="tel"><span data-i18n="ui.call">Llamar</span> <span class="dock__phone" data-bind="business.phoneDisplay"></span></a>
+    <a class="dock__btn dock__btn--alt" data-link="whatsapp" target="_blank" rel="noopener" hidden><span data-i18n="ui.whatsapp">WhatsApp</span></a>
+  </div>
+
+  <script src="content.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
